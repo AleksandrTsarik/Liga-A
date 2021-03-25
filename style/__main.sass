@@ -1,0 +1,236 @@
+.screen-loader
+    height: 100vh
+    display: flex
+    position: relative
+    z-index: 10
+    &.hidden
+        display: none
+    img
+        width: 800px
+        height: 100px
+    .inner
+        margin: auto
+        
+        .link
+            position: absolute
+            position: absolute
+            bottom: 100px
+            left: 50%
+            transform: translateX(-50%)
+            font-style: normal
+            font-weight: normal
+            font-size: 24px
+            line-height: 22px
+            color: #000000
+            &_md
+                display: none
+                @media screen and ( max-width: 768px )
+                    display: block
+            &_lg
+                @media screen and ( max-width: 768px )
+                    display: none
+.logo
+    transition: 1.5s
+    opacity: 0
+    visibility: hidden
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 4)
+    &.show
+        opacity: 1
+        visibility: visible
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+.main
+    background: #fff
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    margin: auto
+    z-index: 2
+    height: 100vh
+    display: flex
+    flex-direction: column    
+    &.hidden
+        opacity: 0
+
+.hedear
+    position: absolute
+    top: 0
+    left: 0    
+    background: #fff
+    width: 100%
+    padding: 25px 0
+    transition: 1s 
+    z-index: 5   
+    &.hidden
+        opacity: 0
+        visibility: hidden
+        transform: translateY(-100%)
+    .container
+        position: static
+        display: flex
+        justify-content: space-between
+        align-items: center   
+
+.hedear__logo
+    width: 195px
+    height: 24px
+.menu
+    @media screen and ( max-width: 768px )
+        background: #fff
+        position: absolute
+        top: 100%
+        right: 0        
+        left: 0
+        height: 0
+        margin: auto
+        display: flex
+        flex-direction: column
+        transition: .5s
+        overflow: hidden
+        opacity: 0
+        &.show
+            opacity: 1
+            height: calc(100vh - 74px)
+        
+.menu__list
+    display: flex
+    @media screen and ( max-width: 768px )
+        display: flex
+        flex-direction: column
+        margin: auto
+        text-align: center
+    li
+        @media screen and ( max-width: 768px )
+            margin-bottom: 30px
+            &:last-child
+                a
+                    img
+                        display: none
+        a
+            font-weight: 500
+            font-size: 14px
+            line-height: 14px
+            color: #0B0B0B
+            position: relative
+            @media screen and ( max-width: 768px )
+                font-size: 28px
+            img
+                position: absolute
+                right: -11px
+                top: 0
+
+            &::after
+                display: block
+                content: ""
+                background-color: rgba(#2C39F2, 0.9 )
+                height: 2px
+                width: 0%
+                transition: 0.3s
+                transform: translateX(-50%)
+                position: absolute
+                left: 50%
+            &:hover:after, &:hover:before
+                width: 100%
+    li + li 
+        margin-left: 25px
+        @media screen and ( max-width: 768px )
+            margin-left: 0
+.main__conent
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin: 0 -20px
+    height: 100vh
+    @media screen and ( max-width: 768px )
+        height: 100vh
+.main__title
+    padding: 0 20px
+    max-width: 55%
+    flex: 0 0 55%
+    @media screen and ( max-width: 768px )
+        max-width: 100%
+        flex: 0 0 100% 
+    &.hidden
+        display: none    
+
+.main__title__inner
+    font-weight: normal
+    font-size: 96px
+    line-height: 96px
+    color: #2C39F2
+    @media screen and ( max-width: 991px )
+        font-size: 70px
+    @media screen and ( max-width: 768px )
+        font-size: 96px
+    @media screen and ( max-width: 575px )
+        font-size: 60px
+
+.main__info
+    padding: 0 20px
+    max-width: 45%
+    flex: 0 0 45%
+    @media screen and ( max-width: 768px )
+        background: #2C39F2
+        max-width: 100%
+        flex: 0 0 100%
+        position: fixed
+        top: 74px
+        right: 100%
+        bottom: 0
+        width: 100%
+        opacity: 0
+        visibility: hidden
+        z-index: 9 
+        transition: .7s
+        display: flex
+
+    &.show
+         @media screen and ( max-width: 768px )
+            right: 0  
+            opacity: 1
+            visibility: visible
+            z-index: 9 
+    
+.main__info__inner
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    @media screen and ( max-width: 768px )
+        align-items: center
+        margin: auto
+    .main__img
+        &_open
+            display: none
+            @media screen and ( max-width: 768px )
+                display: block
+        &_close
+            @media screen and ( max-width: 768px )
+                display: none
+.main__text
+    font-size: 30px
+    line-height: 40px
+    color: #000000
+    @media screen and ( max-width: 768px )
+        margin: 35px auto 0
+        width: 50%
+        color: white
+.container
+    .main__inner
+        margin: auto
+        transition: 1s
+        position: relative
+        &__bg
+            position: absolute
+            top: 0
+            left: 50%
+            transform: translate(-50%, 0)
+            img
+                height: 100vh
+                padding-top: 74px
+            @media screen and ( max-width: 768px )
+                display: none
+        &.hidden
+            opacity: 0
+            visibility: hidden
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 3)

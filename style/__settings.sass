@@ -1,0 +1,54 @@
+
+h1, h2, h3, h4, h5, h6, p
+    margin: 0
+    padding: 0
+
+*, *::before, *::after
+    box-sizing: border-box
+
+ul
+    padding: 0
+    margin: 0
+li
+    list-style: none
+a
+    text-decoration: none
+
+img
+    max-width: 100%
+    vertical-align: bottom
+
+.burger
+    cursor: pointer
+    width: 30px
+    height: 20px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    display: none
+    @media screen and ( max-width: 768px )
+        display: flex
+    div
+        background: #2C39F2
+        height: 2px
+        transition: .5s
+        position: relative
+    &.active    
+            
+        div:first-child
+            transform: rotate(-45deg)
+            top: 6px
+        div:nth-child(2)
+            display: none
+        div:last-child
+            transform: rotate(45deg) 
+            bottom: 12px
+            
+
+                
+        
+
+.main__menu
+    display: flex
+    align-items: center
+
